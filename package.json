@@ -1,0 +1,12 @@
+{
+  "name": "text-to-speech-tool",
+  "version": "1.0.0",
+  "description": "Paste text and hear it read aloud.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.4.11"
+  }
+}

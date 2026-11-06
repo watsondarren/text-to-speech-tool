@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'self'; script-src 'self'"
+  >
+  <title>Speech Reader</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Speech Reader</h1>
+    <p class="lede">Paste text, pick a voice, and listen.</p>
+
+    <label class="field" for="text">Text</label>
+    <textarea id="text" placeholder="Paste text here" autofocus></textarea>
+
+    <div class="controls">
+      <label class="field" for="voice">
+        Voice
+        <select id="voice"></select>
+      </label>
+      <label class="field rate" for="rate">
+        Rate
+        <span class="rate-row">
+          <input id="rate" type="range" min="0.5" max="2" step="0.1" value="1">
+          <span id="rate-value">1.0</span>
+        </span>
+      </label>
+    </div>
+
+    <div class="actions">
+      <button id="speak" type="button">Speak</button>
+      <button id="pause" type="button" disabled>Pause</button>
+      <button id="stop" type="button">Stop</button>
+    </div>
+    <p id="status" aria-live="polite"></p>
+  </main>
+  <script src="renderer.js"></script>
+</body>
+</html>
